@@ -32,7 +32,7 @@ const Projects = () => {
     <section id="projects" className="bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-          My <span className="text-[#00BFFF]">Projects</span>
+          My <span className="text-[#1C7ED6]">Projects</span>
         </h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
@@ -40,7 +40,7 @@ const Projects = () => {
               key={index}
               className="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition duration-300 p-6"
             >
-              <h3 className="text-xl font-semibold text-[#00BFFF] mb-2">
+              <h3 className="text-xl font-semibold text-[#1C7ED6] mb-2">
                 {project.title}
               </h3>
               <p className="text-gray-700 mb-4">{project.description}</p>
@@ -48,7 +48,7 @@ const Projects = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#00BFFF] font-medium hover:underline"
+                className="text-[#1C7ED6] font-medium hover:underline"
               >
                 View on GitHub →
               </a>
