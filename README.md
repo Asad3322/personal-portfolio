@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Muhammad Asad — Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React 19 portfolio using the existing Create React App and Tailwind stack.
 
-## Available Scripts
+## Local development
 
-In the project directory, you can run:
+- `npm ci`
+- `npm start` (set PORT=3100 if port 3000 is occupied)
+- `npm test -- --watchAll=false --runInBand`
+- `npm run build`
+- `npm run preview` serves the production build at http://127.0.0.1:3101.
 
-### `npm start`
+The preview server binds only to localhost and supports /about, /skills, /projects, and /contact.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Editing content
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Project content and category filters are maintained in `src/data/projects.js`. Use public source evidence before adding features, completion claims, or live demo links. Screenshots are in `public/projects`; cards without verified screenshots use text thumbnails.
 
-### `npm test`
+`src/Portfolio.jsx` contains the section layout, navigation, filtering, and contact form. `src/portfolio.css` contains the responsive design. Previous components and page wrappers remain in the codebase but are not part of the active entry point.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See `PROJECT_AUDIT.md` for repository coverage, source evidence, exclusions, missing projects, and demo verification. The design now follows the supplied navy/blue UI reference with cutout portraits, decorative rings, blue pill buttons, and white project cards.
 
-### `npm run build`
+The supplied transparent portrait is stored unchanged at `src/components/assets/asad-portrait.png`. Both the Home and About sections use it with proportional sizing and no portrait crop. Technology logos in the hero band represent the toolkit, not clients or endorsements.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The existing Formspree endpoint is retained. Delivery has not been tested; no test message was submitted.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+LinkedIn is maintained in `src/data/profile.js`. Animations respect reduced-motion preferences and leave content visible when animation APIs are unavailable.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Portrait favicon and touch/app assets are committed under `public`. To regenerate them, run `python scripts/generate-favicons.py` with Pillow installed. Build output, dependencies, research files, temporary files and environment files are excluded from Git.
